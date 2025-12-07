@@ -1,7 +1,9 @@
 import { GoogleGenAI } from "@google/genai";
 
 export const generateCakeConcept = async (description: string): Promise<string | null> => {
-  const ai = new GoogleGenAI({ apiKey: AIzaSyAWqB2bP2yLleNNy0ktLULcP6uZEs_vknc});
+  // API anahtarı Vercel Environment Variables üzerinden alınmalıdır.
+  // Kod içine doğrudan yazmak güvenlik açığı yaratır.
+  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
   try {
     const response = await ai.models.generateContent({

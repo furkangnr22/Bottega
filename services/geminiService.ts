@@ -1,7 +1,9 @@
 import { GoogleGenAI } from "@google/genai";
 
 export const generateCakeConcept = async (description: string): Promise<string | null> => {
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const ai = new GoogleGenAI({ apiKey: gen-lang-client-0905133698
+
+ });
 
   try {
     const response = await ai.models.generateContent({

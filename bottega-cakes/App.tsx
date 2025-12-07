@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Hero } from './components/Hero';
 import { CakeBuilder } from './components/CakeBuilder';
 import { AICakeDesigner } from './components/AICakeDesigner';
@@ -68,6 +69,7 @@ function App() {
 
   return (
     <div className="min-h-screen flex flex-col font-sans text-gray-800">
+      <SpeedInsights />
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-rose-100">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">

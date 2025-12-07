@@ -7,9 +7,7 @@ export default defineConfig(({ mode }) => {
   
   return {
     plugins: [react()],
-    build: {
-      outDir: 'build', // Vercel'in varsayılan olarak aradığı klasör ismine değiştiriyoruz
-    },
+    // 'outDir' kaldırıldı, varsayılan 'dist' kullanılacak
     define: {
       'process.env.API_KEY': JSON.stringify(env.API_KEY || process.env.API_KEY || ''),
     },
